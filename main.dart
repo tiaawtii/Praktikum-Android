@@ -1,22 +1,19 @@
-import 'anggota.dart';
-import 'buku.dart';
-import 'peminjaman.dart';
+import 'package:flutter/material.dart';
+import 'radiobutton01.dart';
 
 void main() {
-  // Membuat objek buku
-  var buku1 = Buku('Belajar OOP dart', 'Ada Programmer', 2023);
-  var buku2 = Buku('Pemrograman Flutter', 'Pengembangan Aplikasi', 2024);
+  runApp(const MyApp());
+}
 
-  // Menampilkan Informasi tentang buku
-  buku1.info();
-  buku1.info();
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-  // Membuat objek anggota
-  var anggota1 = Anggota('Alice', 'A001');
-
-  // Membuat objek peminjaman dari buku
-  var peminjaman = Peminjaman(buku1.judul, buku1.pengarang, buku1.tahunTerbit, anggota1);
-
-  // Menampilkan informasi peminjaman
-  peminjaman.info();
+  // This Widget is the root of your application
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Belajar Widget',
+      home: Radiobutton01(),
+    );
+  }
 }
